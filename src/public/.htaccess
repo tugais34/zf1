@@ -1,0 +1,21 @@
+# Déclare la variable d'environnement 
+SetEnv APPLICATION_ENV development
+
+# Modifie une directive du php.ini
+php_value display_errors 1
+
+# Bloc nécessaire à la redirection
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks -MultiViews
+	RewriteEngine On
+	
+	# Si ce n'est pas un fichier
+	RewriteCond %{REQUEST_FILENAME} !-f
+	# Si ce n'est pas un dossier
+	RewriteCond %{REQUEST_FILENAME} !-d
+	# Si ce n'est pas un lien
+	RewriteCond %{REQUEST_FILENAME} !-l
+	# Redirection sur index.php
+	RewriteRule .* index.php [L]
+	
+</IfModule>
