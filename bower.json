@@ -1,0 +1,22 @@
+{
+  "name": "ZF1",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tugais34/zf1",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "Zf"
+  ],
+  "authors": [
+    "Adrien Vilaca"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+  	"bootstrap": ">= 3.2.0",
+  	"respond" : ">= 1.4.2",
+  	"html5shiv" : ">= 3.7.2"
+  }
+}
