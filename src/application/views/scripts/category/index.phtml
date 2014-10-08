@@ -1,0 +1,11 @@
+<div class="page-header">
+    <h1>Listes des catégories de films</h1>
+</div>
+
+<?php foreach ($this->categories as $category) : ?>
+ <h2>
+        <a href="/category/details/categoryid/<?= $category->getCategoryId() ?>">
+            <?= $category->getName() ?>
+        </a>
+    </h2>
+<?php endforeach; ?>

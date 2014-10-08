@@ -1,1 +1,12 @@
-<h1>Index</h1>
+<div class="page-header">
+    <h1>Liste des derniers films</h1>
+</div>
+
+<?php foreach ($this->films as $film) : ?>
+    <h2>
+        <a href="/index/film/filmid/<?= $film->getFilmId() ?>">
+            <?= $film->getTitle() ?>
+        </a>
+    </h2>
+    <p><?= $film->getDescription() ?></p>
+<?php endforeach; ?>

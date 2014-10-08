@@ -1,0 +1,11 @@
+<div class="page-header">
+    <h1>Listes des acteurs de films</h1>
+</div>
+
+<?php foreach ($this->actors as $actor) : ?>
+ <h2>
+        <a href="/actor/details/actorid/<?= $actor->getActorId() ?>">
+            <?= $actor->getFirstName() . ' ' . $actor->getLastName()  ?>
+        </a>
+    </h2>
+<?php endforeach; ?>
