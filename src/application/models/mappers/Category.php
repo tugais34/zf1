@@ -90,8 +90,8 @@ class Model_Mapper_Category
     private function objectToRow(Model_Category $category)
     {
         return array(
-            'category_id' => $category->getActorId(),
-            'name' => $category->getFirstName(),
+            'category_id' => $category->getCategoryId(),
+            'name' => $category->getName(),
             'last_update' => $category->getLastUpdate()
         );
     }

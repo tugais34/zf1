@@ -25,6 +25,21 @@ class Service_Film
         return $this->getFilmMapper()->insert($film);
     }
     
+    public function createCategory($name)
+    {
+        $category = new Model_Category;
+        $category->setName($name);
+        $this->getCategoryMapper()->create($category);
+    }
+    
+    public function createActor($data)
+    {
+        $actor = new Model_Actor;
+        $actor->setFirstName(strtoupper($data['firstName']));
+        $actor->setLastName(strtoupper($data['lastName']));
+        $this->getActorMapper()->create($actor);
+    }
+    
     /**
      * @param unknown $filmId
      * @return Ambigous <boolean, Model_Film>
@@ -64,6 +79,11 @@ class Service_Film
     public function getCategoryList($where = null, $order = null, $count = null, $offset = null)
     {
         return $this->getCategoryMapper()->fetchAll($where, $order, $count, $offset);
+    }
+    
+    public function getCategoriesByFilm($filmId)
+    {
+        return $this->getCategoryList(array('film_id = ?' => $filmId));
     }
     
     /**
