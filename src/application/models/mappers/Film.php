@@ -43,7 +43,7 @@ class Model_Mapper_Film
     /**
      * @param Model_Film $film
      */
-    public function insert(Model_Film $film)
+    public function create(Model_Film $film)
     {
         $data = $this->objectToRow($film);
         return $this->getFilmTable()->insert($data);

@@ -1,0 +1,26 @@
+<div class="page-header">
+    <h1>Ajout d'un film</h1>
+</div>
+<?php if ($this->message != '') : ?>
+    <div class="alert alert-success" role="alert">
+        <?= $this->message ?>
+    </div>
+<?php endif;?>
+<?php 
+$this->form->setAttrib('class', 'form-horizontal');
+$this->form->setAttrib('role', 'form');
+$this->form->setDecorators(
+    array(
+        'FormErrors',
+        array(
+            'ViewScript',
+            array(
+                'viewScript' => 'index/add.form.phtml'
+            )    
+        ),
+        'Form'
+    )
+);
+
+echo $this->form;
+?>

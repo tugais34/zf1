@@ -62,7 +62,7 @@ class Model_Mapper_Category
     }
     
     /**
-     * @return Model_DbTable_Actor
+     * @return Model_DbTable_Category
      */
     private function getCategoryTable()
     {
@@ -73,7 +73,7 @@ class Model_Mapper_Category
     }
     
     /**
-     * @return Model_Actor
+     * @return Model_Category
      */
     private function rowToObject($data)
     {
@@ -85,7 +85,7 @@ class Model_Mapper_Category
     }
     
     /**
-     * @param Model_Actor $actor 
+     * @param Model_Category $category 
      */
     private function objectToRow(Model_Category $category)
     {

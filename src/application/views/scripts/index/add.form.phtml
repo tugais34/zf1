@@ -1,0 +1,195 @@
+<div class="form-group">
+    <?php 
+    $this->element->title->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->title; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->description->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->description; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->releaseYear->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->releaseYear; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->rentalDuration->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->rentalDuration; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->rentalRate->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->rentalRate; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->length->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->length; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->replacementCost->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->replacementCost; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->rating->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->rating; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->specialFeatures->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10 form-inline'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->specialFeatures; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->languageId->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->languageId; 
+    ?>
+</div>
+<div class="form-group">
+    <?php 
+    $this->element->originalLanguageId->setDecorators(
+        array(
+            'ViewHelper',
+            'Description',
+            //'Errors',
+            array('HtmlTag', array(
+                'tag' => 'div',
+                'class' => 'col-sm-10'
+            )),
+            array('Label', array('class' => 'col-sm-2 control-label'))
+        )
+    );
+    echo $this->element->originalLanguageId; 
+    ?>
+</div>
+<div class="form-group">
+    <div class="col-sm-10 col-sm-offset-2">
+        <?php 
+        $this->element->add->setDecorators(array('ViewHelper'));
+        echo $this->element->add;
+        ?>
+    </div>
+</div>

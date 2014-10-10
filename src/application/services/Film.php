@@ -18,11 +18,33 @@ class Service_Film
     private $categoryMapper;
     
     /**
+     * @var Model_Mapper_Language
+     */
+    private $languageMapper;
+    
+    /**
      * @param Model_Film $film
      */
     public function create(Model_Film $film)
     {
         return $this->getFilmMapper()->insert($film);
+    }
+    
+    public function createFilm($data)
+    {
+        $film = new Model_Film();
+        $film->setTitle($data['title'])
+             ->setDescription($data['description'])
+             ->setReleaseYear($data['releaseYear'])
+             ->setLanguageId($data['languageId'])
+             ->setOriginalLanguageId($data['originalLanguageId'])
+             ->setRentalDuration($data['rentalDuration'])
+             ->setRentalRate(str_replace(',', '.', $data['rentalRate']))
+             ->setLength($data['length'])
+             ->setReplacementCost(str_replace(',', '.', $data['replacementCost']))
+             ->setRating($data['rating'])
+             ->setSpecialFeatures(implode(',', $data['specialFeatures']));
+        $this->getFilmMapper()->create($film);
     }
     
     public function createCategory($name)
@@ -86,6 +108,11 @@ class Service_Film
         return $this->getCategoryList(array('film_id = ?' => $filmId));
     }
     
+    public function getLanguageList($where = null, $order = null, $count = null, $offset = null)
+    {
+        return $this->getLanguageMapper()->fetchAll($where, $order, $count, $offset);
+    }
+    
     /**
      * Lazy loading du mapper Film
      * @return Model_Mapper_Film
@@ -120,5 +147,17 @@ class Service_Film
             $this->categoryMapper = new Model_Mapper_Category();
     
         return $this->categoryMapper;
+    }
+    
+    /**
+     * Lazy loading du mapper Language
+     * @return Model_Mapper_Language
+     */
+    private function getLanguageMapper()
+    {
+        if (null === $this->languageMapper)
+            $this->languageMapper = new Model_Mapper_Language();
+    
+        return $this->languageMapper;
     }
 }
